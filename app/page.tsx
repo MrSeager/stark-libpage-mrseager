@@ -1,13 +1,12 @@
 //Components
 import HeaderNav from "@/components/HeaderNav";
+import MainSection from "@/components/MainSection";
 
 export default function Home() {
   return (
-    <div className="bg-white flex flex-col flex-1 items-center justify-start bg-zinc-50 font-sans dark:bg-black">
+    <div className="bg-white flex flex-col flex-1 items-center justify-start bg-zinc-50 font-sans">
       <HeaderNav />
-      <main className="w-full max-w-[120rem]">
-       
-      </main>
+      <MainSection />
     </div>
   );
 }

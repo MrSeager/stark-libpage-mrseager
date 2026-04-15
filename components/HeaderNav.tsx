@@ -7,7 +7,7 @@ import { TiArrowSortedDown } from "react-icons/ti";
 
 export default function HeaderNav() {
     return(
-        <header className="w-full max-w-[120rem] bg-[#f6f6eb] text-[#381fd1] font-bold">
+        <header className="shadow w-full max-w-[120rem] bg-[#f6f6eb] text-[#381fd1] font-bold">
             <nav className="w-full flex justify-center items-center gap-3 py-3">
                 <CgStark size={30} className="text-white bg-[#381fd1] rounded-full p-1" />
                 <button 
