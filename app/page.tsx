@@ -11,4 +11,4 @@ export default function Home() {
   );
 }
 
-// #f6f6eb #381fd1 #7b7b7c #10284b
+// #f6f6eb #381fd1 #7b7b7c #10284b #f3f2fc 
