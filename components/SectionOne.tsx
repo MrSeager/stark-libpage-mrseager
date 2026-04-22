@@ -57,9 +57,9 @@ export default function SectionOne() {
                 className="cursor-pointer flex font-semibold justify-between items-center duration-500
                           hover:text-[#381fd1]"
               >
-                Categories<MdKeyboardArrowDown size={23} className={`duration-500 ${!open ? 'rotate-0' : 'rotate-180'}`} />
+                Categories<MdKeyboardArrowDown size={23} className={`duration-300 ${!open ? 'rotate-0' : 'rotate-180'}`} />
               </button>
-              <div className={`ps-5 flex flex-col gap-5 duration-500 overflow-hidden ${open ? 'h-full' : 'h-0'}`}>
+              <div className={`ps-5 flex flex-col gap-5 duration-300 overflow-hidden ${open ? 'h-full' : 'h-0'}`}>
                 {categories.map((category, index) => (
                     <SectionOneLink 
                         key={index}
@@ -69,13 +69,13 @@ export default function SectionOne() {
                 ))}
               </div>
             </div>
-            <div className="flex flex-col gap-2 duration-500 text-[#10284b] bg-[#f3f2fc] p-4 rounded-[10px]
+            <div className="flex flex-col gap-2 duration-300 text-[#10284b] bg-[#f3f2fc] p-4 rounded-[10px]
                             hover:scale-103">
-                <h1 className="text-[19px] text-base/6 font-bold">Constribute to Stark</h1>
+                <h1 className="text-[17px] text-base/6 font-bold">Constribute to Stark</h1>
                 <p className="text-base/5 text-[14px]">Got any accessibility resources or news?</p>
                 <button 
                     type="button" 
-                    className="duration-500 font-semibold cursor-pointer bg-[#381fd1] text-[#f6f6eb] border border-[#381fd1] py-2 rounded-md
+                    className="duration-300 font-semibold cursor-pointer bg-[#381fd1] text-[#f6f6eb] border border-[#381fd1] py-2 rounded-md
                                 hover:bg-transparent hover:text-[#381fd1]"
                 >
                     Submit a Resource

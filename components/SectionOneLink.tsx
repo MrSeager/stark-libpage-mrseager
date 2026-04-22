@@ -10,7 +10,7 @@ export default function SectionOneLink({ text, href }: SectionOneLinkProps) {
     return(
         <Link 
             href={href}
-            className="font-semibold duration-500
+            className="font-semibold duration-300
                         hover:text-[#381fd1]"
             >
             {text}

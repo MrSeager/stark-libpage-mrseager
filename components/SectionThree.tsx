@@ -9,7 +9,7 @@ export default function SectionThree() {
                 <h3 className="font-bold text-[55px] text-base/13">Featured Collections</h3>
                 <Link 
                     href={'/'}
-                    className="uppercase underline duration-500 text-[#381fd1] font-semibold
+                    className="uppercase underline duration-300 text-[#381fd1] font-semibold
                                 hover:opacity-50"
                 >
                     View all
