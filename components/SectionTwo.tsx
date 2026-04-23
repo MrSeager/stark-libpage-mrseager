@@ -14,8 +14,8 @@ export default function SectionTwo() {
 
     return(
         <div className="flex flex-col gap-3 text-[#10284b]">
-            <div className="flex justify-between items-center w-full">
-                <h2 className="font-bold text-[55px] text-base/13">New in the Library</h2>
+            <div className="flex flex-col md:flex-row justify-between items-center w-full">
+                <h2 className="text-center md:text-start font-bold text-[55px] text-base/13">New in the Library</h2>
                 <Link 
                     href={'/'}
                     className="uppercase underline duration-300 text-[#381fd1] font-semibold
@@ -24,8 +24,8 @@ export default function SectionTwo() {
                     View all
                 </Link>
             </div>
-            <p className="text-base/6">Newly added accessibility resources, guides, and more.</p>
-            <div className="grid grid-cols-3 gap-5">
+            <p className="text-center md:text-start text-base/6">Newly added accessibility resources, guides, and more.</p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {data.map((item, index) => (
                     <SectionTwoItem 
                         key={index}

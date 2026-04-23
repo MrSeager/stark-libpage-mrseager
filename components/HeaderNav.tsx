@@ -8,6 +8,8 @@ import NavProductLink from "./NavProductLink";
 //Icons
 import { CgStark } from "react-icons/cg";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { FiMenu } from "react-icons/fi";
+import { IoClose } from "react-icons/io5";
 
 export default function HeaderNav() {
     const [productOpen, setProductOpen] = useState<boolean>(false);
@@ -15,12 +17,12 @@ export default function HeaderNav() {
 
     return(
         <header className="shadow w-full max-w-[120rem] bg-[#f6f6eb] text-[#381fd1] font-bold">
-            <nav className="relative w-full flex justify-center items-center gap-3 py-3">
+            <nav className="relative w-full flex justify-between lg:justify-center items-center gap-3 py-3 px-5">
                 <CgStark size={30} className="text-white bg-[#381fd1] rounded-full p-1" />
                 <button 
                     type="button"
                     onClick={() => setProductOpen(!productOpen)}
-                    className="uppercase flex gap-1 items-center cursor-pointer border border-2 border-transparent rounded-md px-3 duration-300
+                    className="uppercase hidden lg:flex gap-1 items-center cursor-pointer border border-2 border-transparent rounded-md px-3 duration-300
                                 hover:border-[#381fd1]"
                     >
                     Product <TiArrowSortedDown />
@@ -59,33 +61,91 @@ export default function HeaderNav() {
                         productDis="Some product discription 4"
                     />
                 </div>
-                <NavLink 
-                    text="Link"
-                    link="/"
-                />
-                <NavLink 
-                    text="Blog"
-                    link="/"
-                />
-                <NavLink 
-                    text="Library"
-                    link="/"
-                />
-                <NavLink 
-                    text="Support"
-                    link="/"
-                />
-                <NavLink 
-                    text="Log in"
-                    link="/"
-                />
-                <button
+                <div className="hidden lg:flex gap-3">
+                    <NavLink 
+                        text="Link"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Blog"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Library"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Support"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Log in"
+                        link="/"
+                    />
+                    <button
+                        type="button"
+                        className="uppercase flex gap-1 items-center cursor-pointer border border-2 border-[#381fd1] bg-[#381fd1] text-white rounded-md px-3 duration-300
+                                    hover:bg-transparent hover:text-[#381fd1]"
+                    >
+                        30-day free team trial
+                    </button>
+                </div>
+                <button 
                     type="button"
-                    className="uppercase flex gap-1 items-center cursor-pointer border border-2 border-[#381fd1] bg-[#381fd1] text-white rounded-md px-3 duration-300
-                                hover:bg-transparent hover:text-[#381fd1]"
+                    title="menu" 
+                    className="lg:hidden border border-2 border-[#381fd1] rounded-md cursor-pointer duration-300
+                                hover:bg-[#381fd1] hover:text-[white]"
+                    onClick={() => setMenuOpen(true)}
                 >
-                    30-day free team trial
+                    <FiMenu size={25} />
                 </button>
+                <div className={`z-100 lg:hidden overflow-hidden absolute ${menuOpen ? "w-full px-5" : "w-0 px-0"} py-3 duration-300 h-screen fixed bg-white top-0 right-0
+                                flex flex-col gap-3 items-start`}
+                >
+                    <div className="flex items-center justify-between w-full px-2"> 
+                        <CgStark size={30} className="text-white bg-[#381fd1] rounded-full p-1" />
+                        <button
+                            type="button"
+                            title="close"
+                            className="border border-2 border-[#381fd1] rounded-md cursor-pointer duration-300
+                                        hover:bg-[#381fd1] hover:text-[white]"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            <IoClose size={25} />
+                        </button>
+                    </div>
+                    <NavLink 
+                        text="Product"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Link"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Blog"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Library"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Support"
+                        link="/"
+                    />
+                    <NavLink 
+                        text="Log in"
+                        link="/"
+                    />
+                    <button
+                        type="button"
+                        className="text-nowrap uppercase flex gap-1 items-center cursor-pointer border border-2 border-[#381fd1] bg-[#381fd1] text-white rounded-md px-3 duration-300
+                                    hover:bg-transparent hover:text-[#381fd1]"
+                    >
+                        30-day free team trial
+                    </button>
+                </div>
             </nav>
         </header>
     );

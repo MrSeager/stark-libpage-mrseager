@@ -9,14 +9,14 @@ import { RiInstagramFill } from "react-icons/ri";
 
 export default function FooterNav() {
     return(
-        <footer className="flex flex-col gap-10 max-w-[120rem] w-full px-20 py-15 bg-[#10284b] text-[#f6f6eb]">
+        <footer className="flex flex-col gap-10 max-w-[120rem] w-full px-5 lg:px-20 py-15 bg-[#10284b] text-[#f6f6eb]">
             <div className="flex items-center justify-between">
-                <h5 className="text-[50px] font-bold text-base/13">Made remotely with love by <br />Stark Lab, Inc.</h5>
-                <span className="ratio-1/1 text-[#10284b] bg-[#f6f6eb] rounded-full p-2">
+                <h5 className="w-full text-center lg:text-start text-[50px] font-bold text-base/13">Made remotely with love by <br className="hidden md:block" />Stark Lab, Inc.</h5>
+                <span className="hidden lg:block ratio-1/1 text-[#10284b] bg-[#f6f6eb] rounded-full p-2">
                     <CgStark size={50} />
                 </span>
             </div>
-            <div className="grid grid-cols-4">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
                 <FooterNavItem 
                     text="Product"
                     footerLinks={[
@@ -61,7 +61,7 @@ export default function FooterNav() {
                     ]}
                 />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-3 items-center justify-between">
                 <div className="flex gap-3">
                     <FooterNavLink 
                         href="/" 

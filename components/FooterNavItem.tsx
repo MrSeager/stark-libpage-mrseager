@@ -13,7 +13,7 @@ interface FooterNavItemProps {
 
 export default function FooterNavItem({ text, footerLinks }: FooterNavItemProps) {
     return(
-        <div className="flex flex-col gap-2 items-start">
+        <div className="flex flex-col gap-2 items-center md:items-start">
             <h5 className="uppercase font-bold text-base/5">{text}</h5>
             {footerLinks.map((link, index) => (
                 <Link 
